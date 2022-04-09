@@ -1,0 +1,163 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+ 
+namespace Algos
+{
+ public class Solver
+    {
+        private readonly int _m;
+        private readonly int _n;
+        private readonly List<tuple int="">> _queries;
+        private int[][] _memo;
+ 
+        public Solver(int m, int n, List<tuple int="">> queries)
+        {
+            _m = m;
+            _n = n;
+            _queries = queries;
+        }
+ 
+        public int SolveCase()
+        {
+            _memo = new int[_n + 1][];
+            for (int i = 0; i < _n + 1; i++)
+                _memo[i] = new int[_n + 1];
+            for (int i = _n; i >= 0; i--)
+            {
+                for (int j = _n; j >= 0; j--)
+                {
+                    _memo[i][j] = -1;
+                }
+            }
+ 
+            return Dp(-1, -1);
+        }
+ 
+        private int Dp(int r1, int r2)
+        {
+            if (r1 + 1 == _n || r2 + 1== _n)
+                return 0;
+            if (_memo[r1 + 1][r2 + 1] != -1)
+                return _memo[r1 + 1][r2 + 1];
+ 
+            var i = Math.Max(r1, r2) + 1;
+            //r1 stays in place
+            var r2Cover = 0;
+            if (r2 != -1)
+                r2Cover = Math.Abs(_queries[r2].Item2 - _queries[i].Item1);
+            var d1 = Dp(r1, i);
+            //r2 stays in place
+            var r1Cover = 0;
+            if (r1 != -1)
+                r1Cover = Math.Abs(_queries[r1].Item2 - _queries[i].Item1);
+            var d2 = Dp(i, r2);
+ 
+            var queryCover = Math.Abs(_queries[i].Item1 - _queries[i].Item2);
+            var min = Math.Min(r2Cover + d1 + queryCover, r1Cover + d2 + queryCover);
+ 
+            _memo[r1 + 1][r2 + 1] = min;
+ 
+            return min;
+        }
+    }
+  
+    class Solution
+    {
+        static void Main(string[] args)
+        {
+            //CaseSub0();
+            //Case0();
+            //Case1();
+            //Case2();
+            //RandomBigCase();
+            //return;
+ 
+            var T = int.Parse(Console.ReadLine());
+            for (var i = 0; i < T; i++)
+            {
+                ProcessCase();
+            }
+        }
+ 
+        private static void ProcessCase()
+        {
+            var @case = Console.ReadLine().Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+            var M = int.Parse(@case[0]);
+            var N = int.Parse(@case[1]);
+            var queries = new List<tuple int="">>(N);
+            for (int i = 0; i < N; i++)
+            {
+                var query = Console.ReadLine().Split(new[] { " " }, StringSplitOptions.RemoveEmptyEntries);
+                queries.Add(Tuple.Create(int.Parse(query[0]), int.Parse(query[1])));
+            }
+            var solution = new Solver(M, N, queries).SolveCase();
+            Console.WriteLine(solution);
+        }
+   
+  private static void CaseSub0()
+        {
+            var M = 2;
+            var N = 1;
+            var queries = new List<tuple int="">>();
+            queries.Add(Tuple.Create(1, 2));
+            var solution = new Solver(M, N, queries).SolveCase();
+            Console.WriteLine("Casesub0 " + solution);
+        }
+ 
+        private static void Case0()
+        {
+            var M = 5;
+            var N = 4;
+            var queries = new List<tuple int="">>();
+            queries.Add(Tuple.Create(1, 5));
+            queries.Add(Tuple.Create(3, 2));
+            queries.Add(Tuple.Create(4, 1));
+            queries.Add(Tuple.Create(2, 4));
+            var solution = new Solver(M, N, queries).SolveCase();
+            Console.WriteLine("Case0 " + solution);
+        }
+ 
+        private static void Case1()
+        {
+            var M = 4;
+            var N = 2;
+            var queries = new List<tuple int="">>();
+            queries.Add(Tuple.Create(1, 2));
+            queries.Add(Tuple.Create(4, 3));
+            var solution = new Solver(M, N, queries).SolveCase();
+            Console.WriteLine("Case1 " + solution);
+        }
+ 
+        private static void Case2()
+        {
+            var M = 10;
+            var N = 3;
+            var queries = new List<tuple int="">>();
+            queries.Add(Tuple.Create(2, 4));
+            queries.Add(Tuple.Create(5, 4));
+            queries.Add(Tuple.Create(9, 8));
+            var solution = new Solver(M, N, queries).SolveCase();
+            Console.WriteLine("Case2 " + solution);
+        }
+ 
+        private static void RandomBigCase()
+        {
+            var M = 1000;
+            var N = 1000;
+            var queries = new List<tuple int="">>();
+            var r = new Random(666);
+            while (queries.Count != N)
+            {
+                var from = r.Next(1, M + 1);
+                var to = r.Next(1, M + 1);
+                var t = Tuple.Create(from, to);
+                if (!queries.Contains(t))
+                    queries.Add(t);
+            }
+            var solution = new Solver(M, N, queries).SolveCase();
+            Console.WriteLine("RandomBigCase " + solution);
+        }
+    }
+}
+</tuple></tuple></tuple></tuple></tuple></tuple></tuple></tuple>
