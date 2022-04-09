@@ -57,6 +57,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interview", "Interview", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Coins Combinations", "ConsoleApplication1\ConsoleApplication1.vcxproj", "{3DCD8DEB-7EBA-488B-B67A-2AE956368D5C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThreeSum", "ThreeSum\ThreeSum.vcxproj", "{6C8BDAD6-87F3-40FD-9B06-87056A94D2CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -233,6 +235,14 @@ Global
 		{3DCD8DEB-7EBA-488B-B67A-2AE956368D5C}.Release|x64.Build.0 = Release|x64
 		{3DCD8DEB-7EBA-488B-B67A-2AE956368D5C}.Release|x86.ActiveCfg = Release|Win32
 		{3DCD8DEB-7EBA-488B-B67A-2AE956368D5C}.Release|x86.Build.0 = Release|Win32
+		{6C8BDAD6-87F3-40FD-9B06-87056A94D2CF}.Debug|x64.ActiveCfg = Debug|x64
+		{6C8BDAD6-87F3-40FD-9B06-87056A94D2CF}.Debug|x64.Build.0 = Debug|x64
+		{6C8BDAD6-87F3-40FD-9B06-87056A94D2CF}.Debug|x86.ActiveCfg = Debug|Win32
+		{6C8BDAD6-87F3-40FD-9B06-87056A94D2CF}.Debug|x86.Build.0 = Debug|Win32
+		{6C8BDAD6-87F3-40FD-9B06-87056A94D2CF}.Release|x64.ActiveCfg = Release|x64
+		{6C8BDAD6-87F3-40FD-9B06-87056A94D2CF}.Release|x64.Build.0 = Release|x64
+		{6C8BDAD6-87F3-40FD-9B06-87056A94D2CF}.Release|x86.ActiveCfg = Release|Win32
+		{6C8BDAD6-87F3-40FD-9B06-87056A94D2CF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -259,6 +269,7 @@ Global
 		{18A6E9E3-A5FF-4F07-8DEB-37CB03ED9E39} = {1E7A1C04-C394-4852-9011-FCD79D29F4AA}
 		{D1FD94C9-B493-447F-B5CC-035E007631A6} = {025EC1F7-1B33-4D04-8189-8A58412D2AC0}
 		{3DCD8DEB-7EBA-488B-B67A-2AE956368D5C} = {108155FC-03E9-4A60-A9E5-FBB328B34DAD}
+		{6C8BDAD6-87F3-40FD-9B06-87056A94D2CF} = {26485543-5823-4739-9AA8-EE3A286B08D4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F9137EC8-2009-453B-BA59-DED80DF508FF}
