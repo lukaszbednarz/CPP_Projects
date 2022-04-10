@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Variable_Sized_Arrays", "Variable_Sized_Arrays\Variable_Sized_Arrays.vcxproj", "{6BACC3F0-6F0C-4653-8407-81552BF71941}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Magic_Spells", "Magic_Spells\Magic_Spells.vcxproj", "{45CBF7FC-F2A7-42D8-8625-02F47CB0B6C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{6BACC3F0-6F0C-4653-8407-81552BF71941}.Release|x64.Build.0 = Release|x64
 		{6BACC3F0-6F0C-4653-8407-81552BF71941}.Release|x86.ActiveCfg = Release|Win32
 		{6BACC3F0-6F0C-4653-8407-81552BF71941}.Release|x86.Build.0 = Release|Win32
+		{45CBF7FC-F2A7-42D8-8625-02F47CB0B6C9}.Debug|x64.ActiveCfg = Debug|x64
+		{45CBF7FC-F2A7-42D8-8625-02F47CB0B6C9}.Debug|x64.Build.0 = Debug|x64
+		{45CBF7FC-F2A7-42D8-8625-02F47CB0B6C9}.Debug|x86.ActiveCfg = Debug|Win32
+		{45CBF7FC-F2A7-42D8-8625-02F47CB0B6C9}.Debug|x86.Build.0 = Debug|Win32
+		{45CBF7FC-F2A7-42D8-8625-02F47CB0B6C9}.Release|x64.ActiveCfg = Release|x64
+		{45CBF7FC-F2A7-42D8-8625-02F47CB0B6C9}.Release|x64.Build.0 = Release|x64
+		{45CBF7FC-F2A7-42D8-8625-02F47CB0B6C9}.Release|x86.ActiveCfg = Release|Win32
+		{45CBF7FC-F2A7-42D8-8625-02F47CB0B6C9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

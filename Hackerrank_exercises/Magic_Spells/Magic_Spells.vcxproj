@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6bacc3f0-6f0c-4653-8407-81552bf71941}</ProjectGuid>
-    <RootNamespace>VariableSizedArrays</RootNamespace>
+    <ProjectGuid>{45cbf7fc-f2a7-42d8-8625-02f47cb0b6c9}</ProjectGuid>
+    <RootNamespace>MagicSpells</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -116,7 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -144,7 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="test_0.txt" />
-    <Text Include="test_1.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\filesystem" />

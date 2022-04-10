@@ -23,9 +23,6 @@
     <Text Include="test_0.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="test_1.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
   </ItemGroup>
   <ItemGroup>
     <None Include="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.31.31103\include\filesystem" />
